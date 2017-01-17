@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+
+<body ng-app="todoList">
+	<div class="container" ng-controller="MainController" >
+	
+		<h1 class="title">To do list</h1>
+<!-- 		<h2>{{ youHaveThingsText }} ee</h2>
+ -->
+		<div>
+			<form name="form" ng-submit="addItem()">
+			  <input class="input" required="true" type="text" ng-model="inputItemName" placeholder="What to do..." /> 
+			  <button class="add-button" ng-disabled="form.$invalid">+</button>
+
+			</form>
+			<button class="add-button clear-button" ng-click="clearDone()">Clear completed</button>
+
+		</div>
+
+		<ul class="item-list" ng-repeat="item in items">
+			<li class="item">
+<!-- 				<a class="edit-button" ng-click="">Edit</a>
+ -->				<p class="item-text" ng-class="{ 'inactive':item.done }" ng-click="item.done = !item.done">{{ item.name }}</p>
+			</li>
+
+		</ul>
+	</div>
+
+<!-- app.js -->
+<script type="text/javascript" src="js/app.js"></script>
+<!-- controllers -->
+<script type="text/javascript" src="js/controllers/MainController.js"></script>
+<!-- directives -->
+<script type="text/javascript" src="js/directives/todoItem.js"></script>
+
+</body>
+
+</html>

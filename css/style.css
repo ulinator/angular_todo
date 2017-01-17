@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #e8e8e8;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.container {
+  display: block;
+  max-width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 10vh;
+}
+
+.title {
+  margin: 25px 0;
+}
+
+.add-button {
+  font-size: 20px;
+  font-weight: bold;
+  background: #028c02;
+  color: white;
+  text-decoration: none;
+  padding: 4px 9px;
+  border-radius: 50%;
+  margin-left: 5px;
+  border: none;
+}
+
+.add-button:hover {
+  background: #00c100;
+}
+
+.clear-button {
+  border-radius: 2px;
+  margin-top: 12px;
+  margin-left: 0px;
+  font-size: 16px;
+  background: #d4963a;
+}
+
+.clear-button:hover {
+  background: #ff9a03;
+}
+
+.input {
+  padding: 6px;
+}
+
+.add-button,
+.input {
+  display: inline-block;
+}
+
+.item-list {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.item {
+  margin: 10px 0;
+}
+
+.item .edit-button {
+  background: url('../img/edit-icon.png') no-repeat center center, #028c02;
+}
+
+.item .edit-button:hover {
+  background-color: #00c100;
+}
+
+.item .remove-button {
+  background: url('../img/remove-icon.png') no-repeat center center, #e21e1e;
+}
+
+.item .remove-button:hover {
+  background-color: #ff5c5c;
+}
+
+.item .item-text {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.item .item-text.inactive {
+  text-decoration: line-through;
+  color: #9a9a9a;
+}
+
+.item .item-text:hover {
+  text-decoration: underline;
+}
+
+.item .edit-button,
+.item .remove-button {
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.item .edit-button,
+.item .remove-button,
+.item .item-text {
+  display: inline-block;
+  vertical-align: middle;
+}
